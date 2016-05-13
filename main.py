@@ -2,8 +2,8 @@ from Func import *
 from pygame import *
 from const import *
 from Game import *
+from Character import *
 import os
-import time
 
 screen = display.set_mode((WIDTH,HEIGHT))
 
@@ -20,7 +20,7 @@ textures = {
 
 snds = {}
 fonts = {}
-
+character = "barry"
 running = True
 while running:
 	currTime = 0

@@ -1,6 +1,6 @@
 from pygame import *
 from Character import *
-from time import *
+
 
 class Game:
 	score = 0
