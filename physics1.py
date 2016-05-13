@@ -13,6 +13,7 @@ frame = 0
 xpos = 0
 zap = [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0]
 stzappers = []
+stzapperPos = []
 temp = 0
 
 def shakeImage(img,x,y):
@@ -103,11 +104,12 @@ while running:
                 frame = 0
     if sample(zap,1) == 1:
         temp = pics[szappers][randint(0,15)]
-        stzappers.append(temp,getPos(temp))
-    
-    for i in range len(stzappers):
-        screen.blit(stzappers[i],(1024.))
-    
+        stzappers.append(temp)
+        stzapperPos.append(1024,getPos(temp))
+        
+    for i in range (len(stzappers)):
+        screen.blit(stzappers[i],stzapperPos[i])
+        stzapperPos -= vx
     vx += 0.002
     
         
